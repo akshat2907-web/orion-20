@@ -23,7 +23,8 @@ const NotFound = () => {
           <h1 className="text-7xl font-bold gradient-text mb-4">404</h1>
           <h2 className="text-3xl font-bold mb-4">Page not found</h2>
           <p className="text-lg text-foreground/70 mb-10">
-            Oops! The page you're looking for doesn't exist. Let's get you back on track.
+            Oops! The page you're looking for doesn't exist. Let's get you back
+            on track.
           </p>
           <Link to="/" className="btn-primary gap-2 inline-flex items-center">
             <ArrowLeft className="w-4 h-4" />

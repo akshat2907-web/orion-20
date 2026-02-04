@@ -1,5 +1,16 @@
 import { useState } from "react";
-import { Brain, BookOpen, TrendingUp, Zap, Plus, Clock, Target, Trophy, ChevronRight, MoreVertical } from "lucide-react";
+import {
+  Brain,
+  BookOpen,
+  TrendingUp,
+  Zap,
+  Plus,
+  Clock,
+  Target,
+  Trophy,
+  ChevronRight,
+  MoreVertical,
+} from "lucide-react";
 import Layout from "@/components/Layout";
 
 export default function Dashboard() {
@@ -14,17 +25,65 @@ export default function Dashboard() {
   ];
 
   const subjects = [
-    { id: 1, name: "Mathematics", color: "from-blue-500 to-cyan-400", progress: 75, notes: 18, lastUpdate: "2 hours ago" },
-    { id: 2, name: "Physics", color: "from-purple-500 to-pink-400", progress: 62, notes: 12, lastUpdate: "1 day ago" },
-    { id: 3, name: "Chemistry", color: "from-green-500 to-emerald-400", progress: 88, notes: 15, lastUpdate: "3 hours ago" },
-    { id: 4, name: "Biology", color: "from-orange-500 to-rose-400", progress: 55, notes: 8, lastUpdate: "5 days ago" },
+    {
+      id: 1,
+      name: "Mathematics",
+      color: "from-blue-500 to-cyan-400",
+      progress: 75,
+      notes: 18,
+      lastUpdate: "2 hours ago",
+    },
+    {
+      id: 2,
+      name: "Physics",
+      color: "from-purple-500 to-pink-400",
+      progress: 62,
+      notes: 12,
+      lastUpdate: "1 day ago",
+    },
+    {
+      id: 3,
+      name: "Chemistry",
+      color: "from-green-500 to-emerald-400",
+      progress: 88,
+      notes: 15,
+      lastUpdate: "3 hours ago",
+    },
+    {
+      id: 4,
+      name: "Biology",
+      color: "from-orange-500 to-rose-400",
+      progress: 55,
+      notes: 8,
+      lastUpdate: "5 days ago",
+    },
   ];
 
   const recentActivity = [
-    { id: 1, title: "Created note: Photosynthesis Basics", subject: "Biology", time: "2 hours ago" },
-    { id: 2, title: "Completed lecture recording: Quantum Mechanics", subject: "Physics", time: "5 hours ago" },
-    { id: 3, title: "Generated summary: Integral Calculus", subject: "Mathematics", time: "1 day ago" },
-    { id: 4, title: "Unlocked achievement: 100 notes milestone", subject: "General", time: "2 days ago" },
+    {
+      id: 1,
+      title: "Created note: Photosynthesis Basics",
+      subject: "Biology",
+      time: "2 hours ago",
+    },
+    {
+      id: 2,
+      title: "Completed lecture recording: Quantum Mechanics",
+      subject: "Physics",
+      time: "5 hours ago",
+    },
+    {
+      id: 3,
+      title: "Generated summary: Integral Calculus",
+      subject: "Mathematics",
+      time: "1 day ago",
+    },
+    {
+      id: 4,
+      title: "Unlocked achievement: 100 notes milestone",
+      subject: "General",
+      time: "2 days ago",
+    },
   ];
 
   return (
@@ -32,8 +91,12 @@ export default function Dashboard() {
       <div className="p-6 lg:p-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-2">Welcome back, Student! 👋</h1>
-          <p className="text-foreground/70">Here's your study overview for today</p>
+          <h1 className="text-3xl lg:text-4xl font-bold mb-2">
+            Welcome back, Student! 👋
+          </h1>
+          <p className="text-foreground/70">
+            Here's your study overview for today
+          </p>
         </div>
 
         {/* Stats Grid */}
@@ -50,7 +113,9 @@ export default function Dashboard() {
                   <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-sm font-semibold text-green-600">{stat.change}</span>
+                  <span className="text-sm font-semibold text-green-600">
+                    {stat.change}
+                  </span>
                 </div>
                 <p className="text-foreground/70 text-sm mb-1">{stat.label}</p>
                 <p className="text-2xl font-bold">{stat.value}</p>
@@ -81,7 +146,9 @@ export default function Dashboard() {
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`px-3 py-1 rounded-lg bg-gradient-to-r ${subject.color} text-white text-xs font-semibold`}>
+                    <div
+                      className={`px-3 py-1 rounded-lg bg-gradient-to-r ${subject.color} text-white text-xs font-semibold`}
+                    >
                       {subject.name}
                     </div>
                     <button className="p-1 rounded-lg hover:bg-foreground/10 transition-colors">
@@ -93,8 +160,12 @@ export default function Dashboard() {
                   <div className="space-y-3 mb-4">
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs text-foreground/70">Progress</span>
-                        <span className="text-xs font-semibold">{subject.progress}%</span>
+                        <span className="text-xs text-foreground/70">
+                          Progress
+                        </span>
+                        <span className="text-xs font-semibold">
+                          {subject.progress}%
+                        </span>
                       </div>
                       <div className="w-full h-2 bg-foreground/10 rounded-full overflow-hidden">
                         <div
@@ -108,7 +179,10 @@ export default function Dashboard() {
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-xs text-foreground/60">
                     <span>{subject.notes} notes</span>
-                    <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{subject.lastUpdate}</span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {subject.lastUpdate}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -128,7 +202,9 @@ export default function Dashboard() {
               <div className="space-y-3">
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm text-foreground/70">Study Time</span>
+                    <span className="text-sm text-foreground/70">
+                      Study Time
+                    </span>
                     <span className="text-sm font-semibold">45/60 min</span>
                   </div>
                   <div className="w-full h-2 bg-foreground/10 rounded-full overflow-hidden">
@@ -137,7 +213,9 @@ export default function Dashboard() {
                 </div>
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm text-foreground/70">Notes Created</span>
+                    <span className="text-sm text-foreground/70">
+                      Notes Created
+                    </span>
                     <span className="text-sm font-semibold">2/5</span>
                   </div>
                   <div className="w-full h-2 bg-foreground/10 rounded-full overflow-hidden">
@@ -162,13 +240,17 @@ export default function Dashboard() {
                 <div className="flex items-center justify-between p-3 rounded-lg bg-gradient-to-r from-yellow-500/20 to-orange-500/20">
                   <div>
                     <p className="text-sm font-semibold">🔥 7-Day Streak</p>
-                    <p className="text-xs text-foreground/60">3 more days to go</p>
+                    <p className="text-xs text-foreground/60">
+                      3 more days to go
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20">
                   <div>
                     <p className="text-sm font-semibold">⭐ Perfect Study</p>
-                    <p className="text-xs text-foreground/60">100% focus achieved</p>
+                    <p className="text-xs text-foreground/60">
+                      100% focus achieved
+                    </p>
                   </div>
                 </div>
               </div>
@@ -189,7 +271,9 @@ export default function Dashboard() {
                 >
                   <div className="flex-1">
                     <p className="font-semibold mb-1">{activity.title}</p>
-                    <p className="text-sm text-foreground/60">{activity.subject} • {activity.time}</p>
+                    <p className="text-sm text-foreground/60">
+                      {activity.subject} • {activity.time}
+                    </p>
                   </div>
                   <button className="p-2 rounded-lg hover:bg-foreground/10 transition-colors">
                     <ChevronRight className="w-5 h-5 text-foreground/60" />

@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { ArrowRight, Check, BookOpen, Brain, BarChart3, Sparkles, Lock, Eye, EyeOff } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  BookOpen,
+  Brain,
+  BarChart3,
+  Sparkles,
+  Lock,
+  Eye,
+  EyeOff,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,17 +22,20 @@ export default function Landing() {
     {
       icon: BookOpen,
       title: "Smart Notes",
-      description: "Organize notes with AI-powered tagging and automatic categorization",
+      description:
+        "Organize notes with AI-powered tagging and automatic categorization",
     },
     {
       icon: Brain,
       title: "AI Generation",
-      description: "Generate comprehensive notes from lecture recordings automatically",
+      description:
+        "Generate comprehensive notes from lecture recordings automatically",
     },
     {
       icon: BarChart3,
       title: "Study Analytics",
-      description: "Track progress, analyze study patterns, and optimize learning",
+      description:
+        "Track progress, analyze study patterns, and optimize learning",
     },
     {
       icon: Sparkles,
@@ -40,7 +53,10 @@ export default function Landing() {
         {/* Animated Gradient Background */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
+          <div
+            className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "1.5s" }}
+          ></div>
         </div>
 
         {/* Hero Content */}
@@ -49,25 +65,41 @@ export default function Landing() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-primary/20 mb-8 animate-fade-in">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">The future of studying is here</span>
+              <span className="text-sm font-medium text-foreground">
+                The future of studying is here
+              </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <h1
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up"
+              style={{ animationDelay: "0.1s" }}
+            >
               <span className="gradient-text">AI-Powered Study</span>
               <br />
               <span className="text-foreground">Workspace</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              Orion transforms how you study. Smart notes, automatic lecture transcription, AI-powered insights, and beautiful analytics—all in one place.
+            <p
+              className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 animate-slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Orion transforms how you study. Smart notes, automatic lecture
+              transcription, AI-powered insights, and beautiful analytics—all in
+              one place.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up"
+              style={{ animationDelay: "0.3s" }}
+            >
               <button
-                onClick={() => { setAuthType("signup"); setAuthModal(true); }}
+                onClick={() => {
+                  setAuthType("signup");
+                  setAuthModal(true);
+                }}
                 className="btn-primary gap-2 inline-flex items-center justify-center"
               >
                 Start Learning Free <ArrowRight className="w-4 h-4" />
@@ -78,7 +110,10 @@ export default function Landing() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-foreground/60 animate-slide-up" style={{ animationDelay: "0.4s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-foreground/60 animate-slide-up"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-primary" />
                 <span>No credit card required</span>
@@ -95,13 +130,18 @@ export default function Landing() {
           </div>
 
           {/* Mock Dashboard Preview */}
-          <div className="mt-20 animate-slide-up" style={{ animationDelay: "0.5s" }}>
+          <div
+            className="mt-20 animate-slide-up"
+            style={{ animationDelay: "0.5s" }}
+          >
             <div className="glass rounded-2xl overflow-hidden shadow-2xl border-2 border-white/40">
               <div className="aspect-video bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 p-8">
                 <div className="h-full flex items-center justify-center">
                   <div className="text-center">
                     <Brain className="w-16 h-16 text-primary/40 mx-auto mb-4" />
-                    <p className="text-foreground/40 font-semibold">Dashboard Preview</p>
+                    <p className="text-foreground/40 font-semibold">
+                      Dashboard Preview
+                    </p>
                   </div>
                 </div>
               </div>
@@ -134,8 +174,12 @@ export default function Landing() {
                   <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                  <p className="text-foreground/70 text-sm">{feature.description}</p>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-foreground/70 text-sm">
+                    {feature.description}
+                  </p>
                 </div>
               );
             })}
@@ -147,13 +191,18 @@ export default function Landing() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="gradient-text">Ready to transform your studies?</span>
+            <span className="gradient-text">
+              Ready to transform your studies?
+            </span>
           </h2>
           <p className="text-lg text-foreground/70 mb-10">
             Join thousands of students already using Orion to study smarter.
           </p>
           <button
-            onClick={() => { setAuthType("signup"); setAuthModal(true); }}
+            onClick={() => {
+              setAuthType("signup");
+              setAuthModal(true);
+            }}
             className="btn-primary gap-2 inline-flex items-center text-lg px-8 py-4"
           >
             Get Started Free <ArrowRight className="w-5 h-5" />
@@ -184,7 +233,9 @@ export default function Landing() {
             {authType === "login" ? (
               <form className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     placeholder="you@example.com"
@@ -192,7 +243,9 @@ export default function Landing() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Password</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Password
+                  </label>
                   <div className="relative">
                     <input
                       type={showPassword ? "text" : "password"}
@@ -204,7 +257,11 @@ export default function Landing() {
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60"
                     >
-                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                      {showPassword ? (
+                        <EyeOff className="w-4 h-4" />
+                      ) : (
+                        <Eye className="w-4 h-4" />
+                      )}
                     </button>
                   </div>
                 </div>
@@ -231,7 +288,9 @@ export default function Landing() {
             ) : (
               <form className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Full Name</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     placeholder="John Doe"
@@ -239,7 +298,9 @@ export default function Landing() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Email
+                  </label>
                   <input
                     type="email"
                     placeholder="you@example.com"
@@ -247,7 +308,9 @@ export default function Landing() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Password</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Password
+                  </label>
                   <div className="relative">
                     <input
                       type={showPassword ? "text" : "password"}
@@ -259,7 +322,11 @@ export default function Landing() {
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground/60"
                     >
-                      {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                      {showPassword ? (
+                        <EyeOff className="w-4 h-4" />
+                      ) : (
+                        <Eye className="w-4 h-4" />
+                      )}
                     </button>
                   </div>
                 </div>

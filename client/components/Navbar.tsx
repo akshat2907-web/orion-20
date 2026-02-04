@@ -2,7 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, LogIn, Sparkles } from "lucide-react";
 
-export default function Navbar({ showAuthButtons = true }: { showAuthButtons?: boolean }) {
+export default function Navbar({
+  showAuthButtons = true,
+}: {
+  showAuthButtons?: boolean;
+}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -55,9 +59,7 @@ export default function Navbar({ showAuthButtons = true }: { showAuthButtons?: b
                   <LogIn className="w-4 h-4 inline mr-2" />
                   Sign In
                 </button>
-                <button className="btn-primary text-sm">
-                  Get Started
-                </button>
+                <button className="btn-primary text-sm">Get Started</button>
               </>
             )}
           </div>

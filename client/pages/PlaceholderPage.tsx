@@ -8,7 +8,12 @@ interface PlaceholderPageProps {
   hasSidebar?: boolean;
 }
 
-export default function PlaceholderPage({ icon: Icon, title, description, hasSidebar = true }: PlaceholderPageProps) {
+export default function PlaceholderPage({
+  icon: Icon,
+  title,
+  description,
+  hasSidebar = true,
+}: PlaceholderPageProps) {
   return (
     <Layout hasSidebar={hasSidebar} showAuthButtons={false}>
       <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center p-6">

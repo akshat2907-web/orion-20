@@ -9,7 +9,11 @@ interface LayoutProps {
   showAuthButtons?: boolean;
 }
 
-export default function Layout({ children, hasSidebar = false, showAuthButtons = true }: LayoutProps) {
+export default function Layout({
+  children,
+  hasSidebar = false,
+  showAuthButtons = true,
+}: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navbar showAuthButtons={showAuthButtons} />

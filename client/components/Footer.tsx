@@ -153,10 +153,16 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex gap-4 text-sm">
-            <a href="#privacy" className="text-foreground/60 hover:text-primary transition-colors">
+            <a
+              href="#privacy"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
               Privacy
             </a>
-            <a href="#terms" className="text-foreground/60 hover:text-primary transition-colors">
+            <a
+              href="#terms"
+              className="text-foreground/60 hover:text-primary transition-colors"
+            >
               Terms
             </a>
           </div>
